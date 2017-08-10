@@ -50,4 +50,4 @@ var name=nameInput.value;
 };
 
 
-};
+
