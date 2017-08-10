@@ -11,7 +11,7 @@ var articles = {
 'artone1': {
 title:'article one',
 heading:'article one goes here',
-date:'auguet 10',
+date:'august 10',
 content:`
 <p>
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
@@ -26,7 +26,7 @@ content:`
 'arttwo ':{
     title:'article two',
 heading:'article two goes here',
-date:'auguet 10',
+date:'august 10',
 content:`
 <p>
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
@@ -41,7 +41,7 @@ content:`
 'artthree' : { 
     title:'article three',
 heading:'article three goes here',
-date:'auguet 10',
+date:'august 10',
 content:`
 <p>
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
@@ -60,6 +60,8 @@ var title = data.title;
 var date=data.date;
 var heading=data.heading;
 var content=data.content;
+
+
 var htmlTemplate=  `
      <html>
   <head>
@@ -95,7 +97,7 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:artName', function (req, res) {
+app.get('/:articleName', function (req, res) {
    var  articleName = req.params.articleName;
  res.send(createTemplate(articles[articleName]));
 });
