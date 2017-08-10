@@ -26,7 +26,7 @@ content:`
 'arttwo ':{
     title:'article two',
 heading:'article two goes here',
-date:'august 10',
+date:'august 14',
 content:`
 <p>
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
@@ -41,7 +41,7 @@ content:`
 'artthree' : { 
     title:'article three',
 heading:'article three goes here',
-date:'august 10',
+date:'august 16',
 content:`
 <p>
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
