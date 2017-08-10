@@ -4,7 +4,11 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var artone1= {
+
+
+var articles = {
+
+'artone1': {
 title:'article one',
 heading:'article one goes here',
 date:'auguet 10',
@@ -18,6 +22,38 @@ content:`
              <p>
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
             </p> `
+},
+'arttwo ':{
+    title:'article two',
+heading:'article two goes here',
+date:'auguet 10',
+content:`
+<p>
+                the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
+            </p>
+             <p>
+                the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
+            </p>
+             <p>
+                the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
+            </p> `
+},
+'artthree' : { 
+    title:'article three',
+heading:'article three goes here',
+date:'auguet 10',
+content:`
+<p>
+                the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
+            </p>
+             <p>
+                the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
+            </p>
+             <p>
+                the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
+            </p> `
+
+}
 };
 function createTemplate (data) {
 var title = data.title;
@@ -59,14 +95,9 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/artone1', function (req, res) {
- res.send(createTemplate(artone1));
-});
-app.get('/arttwo', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'arttwo.html'));
-});
-app.get('/artthree', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'artthree.html'));
+app.get('/:artName', function (req, res) {
+   var  articleName = req.params.articleName;
+ res.send(createTemplate(articles[articleName]));
 });
 
 
