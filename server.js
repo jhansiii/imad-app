@@ -6,9 +6,9 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles = {
+var articles ={
 
-'artone1': {
+artone1: {
 title:'article one',
 heading:'article one goes here',
 date:'august 10',
@@ -23,7 +23,7 @@ content:`
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
             </p> `
 },
-'arttwo ':{
+arttwo :{
     title:'article two',
 heading:'article two goes here',
 date:'august 14',
@@ -38,7 +38,7 @@ content:`
                 the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.the whole content goes here.
             </p> `
 },
-'artthree' : { 
+artthree : { 
     title:'article three',
 heading:'article three goes here',
 date:'august 16',
