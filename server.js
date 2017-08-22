@@ -113,7 +113,7 @@ pool.query('SELECT * FROM test',function(err,result){
         res.status(500).send(err.toString());
     }
     else{
-        res.send(JSON.stringify(result));
+        res.send(JSON.stringify(result.rows));
     }
     
 });    
